@@ -160,9 +160,9 @@ def quicksort(arr, low, high):
     This function accepts an array of elements, the lower and upper bounds in that array to 
     apply the quicksort algorithm to.
     Args:
-        arr: The array being sorted
-        low: The lower bound of the array to sort.
-        high: The upper bound of the array to sort.
+        arr: (list) The array being sorted
+        low: (int) The lower bound of the array to sort.
+        high: (int) The upper bound of the array to sort.
 
     Raises:
         InvalidBoundError: If invalid bounds are specified the function will throw.

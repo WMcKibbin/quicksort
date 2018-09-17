@@ -83,6 +83,12 @@ def test_partition_str_end_of_arr():
         qsort._partition(arr,5,5,5)
 
 
+#quicksort
+def test_quicksort_empty_arr():
+    with pytest.raises(qsort.EmptyArrayError):
+        qsort.quicksort([],0,0)
+
+
 #quicksort numbers
 def test_quicksort_num_all_same():
     arr = [1,1,1,1,1,1,1,1,1,1,1,1]
@@ -104,7 +110,7 @@ def test_quicksort_num_inverse_arr():
     qsort.quicksort(arr,0,len(arr)-1)
     assert arr == [1,2,3,4,5]
 
-def test_quicksort_num_inverse_arr():
+def test_quicksort_num_sorted_arr():
     arr = [1,2,3,4,5]
     qsort.quicksort(arr,0,len(arr)-1)
     assert arr == [1,2,3,4,5]
@@ -130,7 +136,9 @@ def test_quicksort_str_inverse_arr():
     qsort.quicksort(arr,0,len(arr)-1)
     assert arr == ['a','b','c','d','e']
 
-def test_quicksort_str_inverse_arr():
+def test_quicksort_str_sorted_arr():
     arr = ['a','b','c','d','e']
     qsort.quicksort(arr,0,len(arr)-1)
     assert arr == ['a','b','c','d','e']
+
+
